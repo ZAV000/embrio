@@ -1,11 +1,9 @@
-/* Resetting default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General body styles */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -14,7 +12,6 @@ body {
     
 }
 
-/* Header styles */
 header {
     background: linear-gradient(90deg, #ff6cab, #7366ff);
     color: white;
@@ -31,8 +28,6 @@ header p {
     font-size: 1rem;
 }
 
-/* Navigation styles */
-/* Estilos generales (para pantallas grandes) */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -54,9 +49,8 @@ nav {
     background-color: #e046e0;
 }
 
-/* Estilos para el botón hamburguesa */
 .menu-toggle {
-    display: none;  /* Ocultar el botón en pantallas grandes */
+    display: none;  
     background-color: #e046e0;
     border: none;
     color: white;
@@ -74,12 +68,12 @@ nav {
 nav ul {
     list-style: none;
     padding: 0;
-    display: flex; /* Alineación horizontal en pantallas grandes */
+    display: flex; 
     margin: 0;
 }
 
 nav ul li {
-    margin: 0 15px; /* Espaciado entre los elementos */
+    margin: 0 15px; 
 }
 
 nav ul li a {
@@ -95,18 +89,16 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Estilos para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
-    /* Mostrar el botón de menú en pantallas pequeñas */
     .menu-toggle {
         display: block;
     }
 
     nav ul {
-        display: none;  /* Ocultar el menú por defecto */
+        display: none;  
         background-color: #e046e0;
         position: absolute;
-        top: 60px; /* Asegurarse de que el menú no se sobreponga al encabezado */
+        top: 60px; 
         width: 100%;
         text-align: left;
         padding: 10px 20px;
@@ -114,24 +106,21 @@ nav ul li a:hover {
     }
 
     nav ul li {
-        display: block; /* Apilar los elementos del menú verticalmente */
+        display: block; 
         margin: 10px 0;
     }
 
-    /* Mostrar el menú cuando se haga clic en el botón */
     nav ul.show {
         display: block;
     }
 }
 
-/* Main content styles */
 main {
     padding: 20px;
     margin: 20px;
     margin: 0 20px;
 }
 
-/* Section styles */
 section {
     margin-bottom: 40px;
 }
@@ -150,7 +139,6 @@ section h3 {
     margin-bottom: 10px;
 }
 
-/* Paragraph and list styles */
 p {
     font-size: 1rem;
     margin-bottom: 10px;
@@ -173,7 +161,6 @@ li {
     margin-bottom: 5px;
 }
 
-/* Image and figure styles */
 figure {
     text-align: center;
     margin: 20px 0;
@@ -192,15 +179,17 @@ figcaption {
     margin-top: 10px;
 }
 
-/* Footer styles */
 footer {
     background-color: #9b59b6;
     color: white;
     text-align: center;
     padding: 10px;
     margin-top: 40px;
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 footer p {
     font-size: 1rem;
+    margin: 0; 
 }
