@@ -32,29 +32,96 @@ header p {
 }
 
 /* Navigation styles */
+/* Estilos generales (para pantallas grandes) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #6d7efd;
+    color: white;
+    padding: 10px 20px;
+}
+
+
 nav {
-    background-color: #eb7bff;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e046e0;
+}
+
+/* Estilos para el botón hamburguesa */
+.menu-toggle {
+    display: none;  /* Ocultar el botón en pantallas grandes */
+    background-color: #e046e0;
+    border: none;
+    color: white;
+    font-size: 30px;
     padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background-color: #9b59b6;
 }
 
 nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
+    list-style: none;
+    padding: 0;
+    display: flex; /* Alineación horizontal en pantallas grandes */
+    margin: 0;
 }
 
-nav li {
-    margin: 0 15px;
+nav ul li {
+    margin: 0 15px; /* Espaciado entre los elementos */
 }
 
-nav a {
+nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-nav a:hover {
+nav ul li a:hover {
     text-decoration: underline;
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    /* Mostrar el botón de menú en pantallas pequeñas */
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;  /* Ocultar el menú por defecto */
+        background-color: #e046e0;
+        position: absolute;
+        top: 60px; /* Asegurarse de que el menú no se sobreponga al encabezado */
+        width: 100%;
+        text-align: left;
+        padding: 10px 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    nav ul li {
+        display: block; /* Apilar los elementos del menú verticalmente */
+        margin: 10px 0;
+    }
+
+    /* Mostrar el menú cuando se haga clic en el botón */
+    nav ul.show {
+        display: block;
+    }
 }
 
 /* Main content styles */

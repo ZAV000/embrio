@@ -3,10 +3,7 @@
 <head>
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
-    <meta 
-    name="viewport" 
-    content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hiperémesis Gravídica</title>
 
 </head>
@@ -16,7 +13,8 @@
         <p><strong>Integrantes:</strong>Aguirre Villaseñor Telma Zoé | Carlos De La Torre Juan Diego | Durán Hernández Jimena | Escamilla Salas Laura Andrea | Rodriguez Delgado Elisa</p>
     </header>
     <nav aria-label="Navegación principal">
-        <ul>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        <ul id="menu">
             <li><a href="#introduccion">Introducción</a></li>
             <li><a href="#concepto">Concepto de la patología</a></li>
             <li><a href="#caracteristicas">Características de la patología</a></li>
@@ -27,6 +25,13 @@
             <li><a href="#referencias">Referencias consultadas</a></li>
         </ul>
     </nav>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("show");
+        }
+    </script>
 
     <main>
 
